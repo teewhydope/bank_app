@@ -1,8 +1,10 @@
 import 'package:bank_app_test/common/constants/device_size/size_constants.dart';
 import 'package:bank_app_test/common/screenutil/screenutil.dart';
+import 'package:bank_app_test/presentation/pages/settings/components/logout.dart';
 import 'package:bank_app_test/presentation/pages/settings/components/settings_app_bar.dart';
 import 'package:bank_app_test/presentation/themes/theme_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'components/settings_menu_item.dart';
 import 'components/settings_profile_card.dart';
 
@@ -87,7 +89,37 @@ class SettingsPage extends StatelessWidget {
                               height: Sizes.dimen_20,
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                showAnimatedDialog(
+                                  context: context,
+                                  barrierDismissible: true,
+                                  builder: (BuildContext context) {
+                                    return Center(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(
+                                            Sizes.dimen_10),
+                                        child: Padding(
+                                          padding: EdgeInsets.only(
+                                              bottom: MediaQuery.of(context)
+                                                  .viewInsets
+                                                  .bottom),
+                                          child: Container(
+                                            color: Colors.white,
+                                            height:
+                                                ScreenUtil.defaultHeight * 0.4,
+                                            width:
+                                                ScreenUtil.defaultWidth * 0.8,
+                                            child: LogoutCard(),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  animationType: DialogTransitionType.fade,
+                                  curve: Curves.fastOutSlowIn,
+                                  duration: Duration(milliseconds: 800),
+                                );
+                              },
                               child: SettingsMenuItem(
                                 text: "Logout",
                               ),

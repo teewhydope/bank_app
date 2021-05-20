@@ -23,8 +23,8 @@ class Visualize extends StatelessWidget {
               series: <LineSeries<TransactionListEntity, String>>[
                 LineSeries<TransactionListEntity, String>(
                     dataSource: [
-                      transactionLists.reversed.toList()[30],
-                      transactionLists.reversed.toList()[0],
+                      transactionLists.first,
+                      transactionLists.last,
                     ],
                     color: AppColor.kPrimaryColor,
                     xValueMapper: (TransactionListEntity date, _) =>

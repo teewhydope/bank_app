@@ -22,32 +22,34 @@ class WelcomePage extends StatelessWidget {
             children: [
               Align(
                 alignment: Alignment.centerLeft,
-                child: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: ScreenUtil.defaultWidth * 0.2,
-                        child: Text(
-                          'TB',
-                          style: GoogleFonts.acme(
-                            fontSize: Sizes.dimen_32,
+                child: SingleChildScrollView(
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: ScreenUtil.defaultWidth * 0.2,
+                          child: Text(
+                            'TB',
+                            style: GoogleFonts.acme(
+                              fontSize: Sizes.dimen_32,
+                              color: AppColor.kPrimaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: ScreenUtil.screenWidth * 0.1,
+                          height: ScreenUtil.defaultHeight * 0.01,
+                          decoration: BoxDecoration(
                             color: AppColor.kPrimaryColor,
-                            fontWeight: FontWeight.bold,
+                            borderRadius: BorderRadius.circular(
+                              2,
+                            ),
                           ),
                         ),
-                      ),
-                      Container(
-                        width: ScreenUtil.screenWidth * 0.1,
-                        height: ScreenUtil.defaultHeight * 0.01,
-                        decoration: BoxDecoration(
-                          color: AppColor.kPrimaryColor,
-                          borderRadius: BorderRadius.circular(
-                            2,
-                          ),
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

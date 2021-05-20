@@ -66,7 +66,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
                       SizedBox(height: Sizes.dimen_10),
                       MainAdCard(
                         title: "Welcome back",
-                        content: "Animasahun Ibarahim Omotayo",
+                        content: "Animasahun Ibrahim Omotayo",
                       ),
                       SizedBox(height: Sizes.dimen_10),
                       SavingsAccountCard(),

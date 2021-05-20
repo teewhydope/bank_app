@@ -133,6 +133,7 @@ class _LoginPageState extends State<LoginPage> {
           hintText: 'Password',
           icon: MdiIcons.security,
           suffixIcon: IconButton(
+            color: AppColor.kPrimaryColor,
             icon: Icon(
               _obscureText ? MdiIcons.eyeCircleOutline : MdiIcons.eyeCircle,
             ),

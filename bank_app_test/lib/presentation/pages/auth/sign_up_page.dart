@@ -85,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 _passwordField(),
                 _confirmPasswordField(),
                 SizedBox(height: Sizes.dimen_18),
-                _loginButton(),
+                _signUpButton(),
                 _gotoLogin(),
               ],
             ),
@@ -136,6 +136,7 @@ class _SignUpPageState extends State<SignUpPage> {
           icon: MdiIcons.security,
           obscureText: _obscureText1,
           suffixIcon: IconButton(
+            color: AppColor.kPrimaryColor,
             icon: Icon(
               _obscureText1 ? MdiIcons.eyeCircleOutline : MdiIcons.eyeCircle,
             ),
@@ -167,6 +168,7 @@ class _SignUpPageState extends State<SignUpPage> {
           icon: MdiIcons.security,
           obscureText: _obscureText2,
           suffixIcon: IconButton(
+            color: AppColor.kPrimaryColor,
             icon: Icon(
               _obscureText2 ? MdiIcons.eyeCircleOutline : MdiIcons.eyeCircle,
             ),
@@ -181,7 +183,7 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  Widget _loginButton() {
+  Widget _signUpButton() {
     return BlocBuilder<SignUpUserBloc, SignUpUserState>(
       bloc: _signUpUserBloc,
       builder: (context, state) {
