@@ -4,6 +4,7 @@ import 'package:bank_app_test/common/screenutil/screenutil.dart';
 import 'package:bank_app_test/presentation/pages/welcome_page.dart';
 import 'package:bank_app_test/presentation/provider/authDetails.dart';
 import 'package:bank_app_test/presentation/themes/theme_text.dart';
+import 'package:bank_app_test/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,6 +37,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch(
+            brightness: Brightness.light,
+            primarySwatch: createMaterialColor(Color(AppColor.cPrimaryColor)),
+          ),
           primaryColor: AppColor.kPrimaryColor,
           textTheme: ThemeText.getTextTheme(),
           appBarTheme: const AppBarTheme(

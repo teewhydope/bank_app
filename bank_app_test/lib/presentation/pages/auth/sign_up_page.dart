@@ -168,7 +168,7 @@ class _SignUpPageState extends State<SignUpPage> {
           icon: MdiIcons.security,
           obscureText: _obscureText2,
           suffixIcon: IconButton(
-            color: AppColor.kPrimaryColor,
+            //color: AppColor.kPrimaryColor,
             icon: Icon(
               _obscureText2 ? MdiIcons.eyeCircleOutline : MdiIcons.eyeCircle,
             ),
